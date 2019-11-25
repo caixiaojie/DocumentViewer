@@ -84,8 +84,8 @@ public class TBSFileViewActivity extends AppCompatActivity implements TbsReaderV
             finish();
         }
 
-        getSupportActionBar().setTitle(getString(R.string.view_file) + getFileName(filePath));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setTitle(getString(R.string.view_file) + getFileName(filePath));
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mTbsReaderView = new TbsReaderView(this, this);
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
