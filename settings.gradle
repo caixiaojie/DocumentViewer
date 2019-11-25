@@ -1,2 +1,2 @@
-include ':app', ':WebViewLib'
+include ':app', ':WebViewLib', ':mupdf'
 rootProject.name='DocumentViewer'

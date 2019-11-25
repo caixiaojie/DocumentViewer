@@ -12,6 +12,8 @@ import com.yjhs.documentviewer.utils.FileViewerUtils;
 
 import java.io.File;
 
+import com.artifex.mupdfdemo.MuPDFActivity;
+
 
 /**
  * 文件查看入口
@@ -88,15 +90,15 @@ public class FileViewer {
 
     public static void viewPDFWithMuPDFByPath(Context context, String filePath) {
         Uri uri = Uri.fromFile(new File(filePath));
-//        startMuPDFActivityByUri(context, uri);
+        startMuPDFActivityByUri(context, uri);
     }
 
-//    public static void startMuPDFActivityByUri(Context context, Uri documentUri) {
-//        Intent intent = new Intent(context, DocumentActivity.class);
-//        intent.setAction(Intent.ACTION_VIEW);
-//        intent.setData(documentUri);
-//        context.startActivity(intent);
-//    }
+    public static void startMuPDFActivityByUri(Context context, Uri documentUri) {
+        Intent intent = new Intent(context, MuPDFActivity.class);
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(documentUri);
+        context.startActivity(intent);
+    }
 
     /**
      * 判断是否为图片文件

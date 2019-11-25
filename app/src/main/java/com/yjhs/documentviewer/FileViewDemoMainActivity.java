@@ -80,7 +80,7 @@ public class FileViewDemoMainActivity extends AppCompatActivity {
     private void initView() {
         findViewById(R.id.btn_open_pdf_with_mupdf).setOnClickListener(view -> {
             String fileName = getFilePath("TestPDF.pdf");
-//            startMuPDFActivityWithExampleFile(fileName);
+            startMuPDFActivityWithExampleFile(fileName);
         });
         findViewById(R.id.btn_open_pdf_with_tbs).setOnClickListener((view) -> {
             openFileWithTbs(getFilePath("TestPDF.pdf"));
@@ -101,15 +101,15 @@ public class FileViewDemoMainActivity extends AppCompatActivity {
         TBSFileViewActivity.viewFile(this, filePath);
     }
 
-//    public void startMuPDFActivityWithExampleFile(String fileName) {
-//        File file = new File(fileName);
-//        if (!file.isFile()) {
-//            Toast.makeText(this, "文件不存在", Toast.LENGTH_SHORT).show();
-//            return;
-//        }
-//        Uri uri = Uri.fromFile(file);
-//        FileViewer.startMuPDFActivityByUri(this, uri);
-//    }
+    public void startMuPDFActivityWithExampleFile(String fileName) {
+        File file = new File(fileName);
+        if (!file.isFile()) {
+            Toast.makeText(this, "文件不存在", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Uri uri = Uri.fromFile(file);
+        FileViewer.startMuPDFActivityByUri(this, uri);
+    }
 
 
     @Override
